@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.min.js"></script>
+
+    <!-- loadingbar -->
+    <script src="loading-bar.js"></script>
+    <link href='loading-bar.css' rel='stylesheet' />
+
+    <!-- example app -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="app.js"></script>
+    <link href='app.css' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
+    <div class="jumbotron">
+      <h1>Angular Loading Bar</h1>
+      <p>Berikut adalah contoh dari effect loading untuk meload data</small></p>
+      
+    </div>   
+      <div class="btn-group btn-group-justified">
+      
+        <a href="#" class="btn btn-primary btn-lg" ng-click="fetch()"><i class="glyphicon glyphicon-play-circle"></i> Klik Untuk Tampil Data Dengan</a>
+      </div>
+    
+
+    <h4 class="loading-text">Data Dari API</h4>
+    <div ng-repeat="post in posts">
+      
+        <span class="badge">Nama : {{post.nama}}</span>
+        
+        
+    </div>
+
+  </body>
+</html>
